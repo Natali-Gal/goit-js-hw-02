@@ -1,24 +1,9 @@
+
 const formatString = function(string) {
-    const words = string.split('');
-    console.log(words);
-    const count = words.length;
-    if ( count <= 40 ) {
-        
-        return (string);
-
-    } else {
-        const card = '...';
-        const deleteCard = count - 40;
-        console.log(deleteCard);
-        words.pop(deleteCard);
-        words.push('...');
-        
-        const sentence = words.join('');
-        return (sentence);
-
-    }
-    
-
+  const MAX_LENGTH = 40;
+  if (string.length <= MAX_LENGTH)
+  return string;
+  return string.slice(0,MAX_LENGTH-3) + "...";
 };
 
 
